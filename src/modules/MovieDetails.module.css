@@ -1,3 +1,40 @@
+.card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 80px;
+  height: 90vh;
+}
+
+.img {
+  height: 525px;
+  width: 350px;
+  border-radius: 12px;
+}
+
 .text {
   display: flex;
+  max-width: 390px;
+  flex-direction: column;
+  margin: 0 30px;
+}
+
+.text span{
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .card{
+    flex-direction: column;
+    padding-left: 0;
+    margin-top: 50px;
+  }
+
+  .text {
+    margin-top: 80px;
+    max-width: 350px;
+  }
+
 }

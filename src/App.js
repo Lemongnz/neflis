@@ -15,7 +15,6 @@ function App() {
     <Router>
       <header className="App">        
         <Link to="/"><h1 className={styles.title}>neflis</h1></Link>
-        <Link to="/movie/:movieId">Hola</Link>
       </header>
       <div className="App">
         <Routes>
