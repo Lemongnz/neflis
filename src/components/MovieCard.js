@@ -6,7 +6,7 @@ export function MovieCard({ movie }) {
 
   return (
     <li className={styles.lis}>
-      <Link to={`/movies/:${movie.id}`}>
+      <Link to={`/movie/${movie.id}`}>
       <div className={styles.cardDiv}>
         <img className={styles.img} src={imagenUrl} alt={movie.title} />
         <span className={styles.vote} >{movie.vote_average}</span>

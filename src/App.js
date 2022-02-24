@@ -15,11 +15,12 @@ function App() {
     <Router>
       <header className="App">        
         <Link to="/"><h1 className={styles.title}>neflis</h1></Link>
+        
       </header>
       <div className="App">
         <Routes>
+          <Route exact path="/" element={<LandinPage />} />
           <Route path="/movie/:movieId" element={<MovieDetails />} />
-          <Route path="/" element={<LandinPage />} />
         </Routes>
       </div>
     </Router>
