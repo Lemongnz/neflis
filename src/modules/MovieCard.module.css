@@ -5,6 +5,11 @@
   height: 100%;
   width: 100%;
   position: relative;
+  transition: all .5s cubic-bezier();
+}
+
+.lis:hover {
+  opacity: .8;
 }
 
 .img {
@@ -27,6 +32,8 @@
   font-size: 44px;
   background-color: white;
 }
+
+
 
 @media (max-width: 560px) {
   .cardDiv {

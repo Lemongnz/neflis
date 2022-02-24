@@ -2,3 +2,8 @@
   background-color: black;
   color: white;
 }
+
+.App a{ 
+  text-decoration: none;
+  color: white;
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from '../modules/MovieCard.module.css'
 
 export function MovieCard({ movie }) {
@@ -5,13 +6,13 @@ export function MovieCard({ movie }) {
 
   return (
     <li className={styles.lis}>
+      <Link to={`/movies/:${movie.id}`}>
       <div className={styles.cardDiv}>
-        <img className={styles.img} src={imagenUrl} alt={movie.title}></img>
+        <img className={styles.img} src={imagenUrl} alt={movie.title} />
         <span className={styles.vote} >{movie.vote_average}</span>
-      </div>
-      
-      
+      </div>      
       <span className={styles.title} >{movie.title}</span> 
+      </Link>
     </li>
   )
 }
