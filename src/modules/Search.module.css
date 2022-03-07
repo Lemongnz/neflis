@@ -1,0 +1,41 @@
+.wrapper {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.flex {
+  width: 650px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #fff;
+}  
+
+.input {
+  height: 100%;
+  width: 80%;
+  padding: 0 20px;
+  font-size: 1.3rem;
+  outline: none;
+  height: 100%;
+  border: none;
+}
+
+.search {
+  background-color: #fff;
+  border: none;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .flex {
+    width: 400px;
+  }  
+}
