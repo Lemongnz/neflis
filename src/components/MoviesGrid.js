@@ -1,27 +1,29 @@
 import { MovieCard } from "./MovieCard";
 import styles from '../modules/MovieGrid.module.css'
-import { useEffect, useState } from "react";
+import { filmsFilterReducer } from '../reducers/reduxFilms'
+import { createStore } from "redux"
 import { get } from "../httpClient";
-import { useLocation } from 'react-router-dom';
+import { useState } from "react";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search)
-}
+export  function MoviesGrid() {
+  const [movies, setMovies] = useState([])
+  const searchURL = "/discover/movie";
+
+   get(searchURL)
+    .then((data) => {
+      store.dispatch({data: data.results, type: ""})
+      console.log(data.results)                  
+    })
+                
+  const store = createStore(filmsFilterReducer, [])
+  // store.dispatch({type: "load"})
+
+  store.subscribe(() => {
+    store.getState().then()
+  })
 
 
-export function MoviesGrid() {
-  const [ movies , setMovies ] = useState([]);
-  const query = useQuery();
-  const search = query.get("search");
 
-  useEffect(() => {
-    const searchURL = search ? `/search/movie?query=${search}` : "/discover/movie";
-
-    get(searchURL)
-      .then((data) => {setMovies(data.results)})
-  }, [search]);
-
-  
   return (
     <ul className={styles.grid}>
       {

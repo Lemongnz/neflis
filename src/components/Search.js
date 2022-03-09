@@ -8,7 +8,6 @@ export function Search() {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-
   }
 
 
@@ -24,7 +23,7 @@ export function Search() {
             navigate(`/?search=${value}`)
           }}
         />
-        <button type='submit' className={styles.search}><FaSearch /></button>
+        <button type='submit' className={styles.search}> <FaSearch /> </button>
       </form>
     </div>
   )
