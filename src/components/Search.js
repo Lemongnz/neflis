@@ -1,15 +1,17 @@
-import styles from '../modules/Search.module.css'
-import { FaSearch } from "react-icons/fa"
 import { useNavigate } from 'react-router-dom';
+import styles from '../modules/Search.module.css'
 
-
-export function Search() {
+export function Search() {  
   const navigate = useNavigate();
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
   }
 
+  const searchFunction = (event) => {
+    const query = event.target.value;
+    navigate(`/?search=${query}`);
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -18,12 +20,9 @@ export function Search() {
           type='text' 
           className={styles.input} 
           placeholder="Search Movie ..."
-          onChange={(event) => {
-            const value = event.target.value;
-            navigate(`/?search=${value}`)
-          }}
+          onChange={searchFunction}
         />
-        <button type='submit' className={styles.search}> <FaSearch /> </button>
+        {/* <button type='submit' className={styles.search}> <Search /> </button> */}
       </form>
     </div>
   )

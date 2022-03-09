@@ -1,8 +1,9 @@
 import styles from '../modules/MovieDetails.module.css'
 import { useEffect, useState } from 'react';
-import { get } from '../httpClient';
+
 import { Link, useParams } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi"
+import { getOne } from '../services/movies';
 
 
 export function MovieDetails() {
@@ -10,9 +11,8 @@ export function MovieDetails() {
   const [ movie, setMovie ] = useState(null)
   const imageUrl = "https://image.tmdb.org/t/p/w500"
 
-
   useEffect(() => {
-    get("/movie/" + movieId).then((data) => {
+    getOne(movieId).then((data) => {
       setMovie(data);
     });
   }, [movieId]);
