@@ -1,17 +1,13 @@
 import styles from '../modules/Search.module.css'
 import { FaSearch } from "react-icons/fa"
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
 export function Search() {
-  const [searchText, setSearchText] = useState("");
   const navigate = useNavigate();
-  
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    
 
   }
 
@@ -22,8 +18,7 @@ export function Search() {
         <input 
           type='text' 
           className={styles.input} 
-          placeholder="Search Movie ..." 
-          value={searchText} 
+          placeholder="Search Movie ..."
           onChange={(event) => {
             const value = event.target.value;
             navigate(`/?search=${value}`)

@@ -21,7 +21,7 @@ export function MoviesGrid() {
       .then((data) => {setMovies(data.results)})
   }, [search]);
 
-
+  
   return (
     <ul className={styles.grid}>
       {

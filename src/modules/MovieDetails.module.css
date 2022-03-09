@@ -1,3 +1,9 @@
+.arrow {
+  margin: 0 30px;
+  font-size: 40px;
+  position: absolute;
+}
+
 .card{
   display: flex;
   flex-direction: row;
@@ -29,7 +35,6 @@
   .card{
     flex-direction: column;
     padding-left: 0;
-    margin-top: 50px;
     justify-content: inherit;
   }
 
