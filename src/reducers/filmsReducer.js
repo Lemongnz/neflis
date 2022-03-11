@@ -1,5 +1,7 @@
 export const filmsReducer = (state = [], action) => {
+  
   console.log(state, action)
+  
   switch (action.type) {
     case '@films/set':
       state = action.films;
@@ -10,7 +12,7 @@ export const filmsReducer = (state = [], action) => {
 
   return state;
 };
-
+ 
 export const setFilms = films => { // esto es un "action creator" segun midudev :)
   return {
     type: '@films/set',

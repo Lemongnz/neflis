@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styles from '../modules/Search.module.css'
+import { FiSearch } from "react-icons/fi";
 
 export function Search() {  
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export function Search() {
           placeholder="Search Movie ..."
           onChange={searchFunction}
         />
-        {/* <button type='submit' className={styles.search}> <Search /> </button> */}
+        <button type='submit' className={styles.search}> <FiSearch /> </button>
       </form>
     </div>
   )
