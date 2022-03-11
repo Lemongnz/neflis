@@ -1,7 +1,5 @@
 export const filmsReducer = (state = [], action) => {
   
-  console.log(state, action)
-  
   switch (action.type) {
     case '@films/set':
       state = action.films;
