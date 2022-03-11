@@ -9,14 +9,13 @@ import {
   Link
 } from "react-router-dom";
 
-
 function App() {
   return (
     <Router>
-      <header className="App">        
+      <header className="App">
         <Link to="/"><h1 className={styles.title}>neflis</h1></Link>
-        
       </header>
+
       <div className="App">
         <Routes>
           <Route exact path="/" element={<LandinPage />} />
@@ -26,6 +25,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
