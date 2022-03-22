@@ -1,7 +1,7 @@
 .grid {
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 230px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
   justify-content: center;
   gap: 30px;
   padding: 50px 80px;
@@ -9,7 +9,7 @@
 }
 
 
-@media (max-width: 560px) {
+@media (max-width: 660px) {
   .grid {
     grid-template-columns: 100%;
     padding: 0;
