@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { MoviesGrid } from '../components/MoviesGrid'
 import { Portada } from '../components/Portada';
-import { Search } from '../components/Search'
 import { useQuery } from '../hooks/useQueryHook';
 import { setFilms } from '../reducers/filmsReducer';
 import { filterMovies, getAll } from '../services/movies';
