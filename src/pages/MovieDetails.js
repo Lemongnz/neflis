@@ -22,7 +22,7 @@ export function MovieDetails() {
   }
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.arrow}>
         <Link to="/"><FiArrowLeft/></Link>
       </div>
